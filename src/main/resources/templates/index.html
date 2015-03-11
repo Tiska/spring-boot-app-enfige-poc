@@ -4,8 +4,8 @@
     <title>Hello Spring Boot!</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <!--<link href="../static/css/core.css"-->
-          <!--th:href="@{/css/core.css}"-->
-          <!--rel="stylesheet" media="screen" />-->
+    <!--th:href="@{/css/core.css}"-->
+    <!--rel="stylesheet" media="screen" />-->
 </head>
 <body>
 <div style="text-align: center">
@@ -18,8 +18,11 @@
 </div>
 <div style="text-align: center">
     <h1>Liste des clients</h1>
-    <ul>
-        <li></li>
+    <ul th:each="client : ${clients}">
+        <li>
+            <p th:text="${client.nom}"></p>
+            <p th:text="${client.prenom}"></p>
+        </li>
     </ul>
 </div>
 </body>

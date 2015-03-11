@@ -4,6 +4,7 @@ package demo.service;
 
 
 import demo.bean.Client;
+import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,6 +16,7 @@ import java.util.List;
 /**
  * Created by Adrien on 11/03/2015.
  */
+@Component
 public class BddConnection {
 
     public void addClient (String nom, String prenom){
